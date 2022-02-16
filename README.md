@@ -1,7 +1,5 @@
 # acme-resources
 
-<pre>
-
 1. common                   <!-- files shared or relevant to all groups -->
     |-- devices             <!-- fpgas, ICs and other hardware specs and datasheets -->
         |-- fpga_7series 
@@ -21,9 +19,9 @@
     |-- whitepapaers        <!-- whitepapers/pulications on Xilinix and FPGA ML applications -->
 
 ### Discription
-<p>Collection of documents, links and other resources for UW's ACME Lab. The majority of these resources are currently tracked as external links and may require CERN or UW authentication and internet connection to access. </p>
+Collection of documents, links and other resources for UW's ACME Lab. Some of these resources are currently tracked as external links and may require CERN or UW authentication and internet connection to access.
 
-<p>To use, just open the folder named after the acme lab groups and view files for a list of links, titles and discriptions to documents and other resources. For additional help refer to the README within the group folder.</p>
+To use, just open the folder named after the acme lab groups and view files for a list of links, titles and discriptions to documents and other resources. For additional help refer to the README within the group folder.
 
 ### How to Contribute
 - When making changes to folder or file names, please be thorough in revising every internal link.
@@ -34,8 +32,8 @@
 
 ### Authors and Acknowledgment
 
-<p>Initiated by Anatoliy Martynyuk and Elham Khoda for use in Scott Hauck's ACME lab.</p>
+Initiated by Anatoliy Martynyuk and Elham Khoda for use in Scott Hauck's ACME lab.
 
 ### Project Status
 
-<p>In-development</p>
+In-development

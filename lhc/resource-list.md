@@ -48,6 +48,7 @@
 ### VC709
 [Product Page with Documentation][20]
 ["VC709 Evaluation Board for the Virtex-7 FPGA - User Guide"][21]
+["VC709 Basic Constraint File"][31]
 
 ## Tutorials
 
@@ -101,3 +102,4 @@
 [28]: ../common/tutorials/vivado/Xilinx_ILA_(Integrated_Logic_Analyzer)_Lev_Kurilenko.pdf <!-- https://gitlab.com/scotthauck/largehadroncollider/-/blob/master/Documents/Tutorial/ILA/Xilinx_ILA_Integrated_Logic_Analyzer_Lev_Kurilenko.pdf
 [29]: ../common/tutorials/vivado/vivado-ila.pdf <!-- https://www.xilinx.com/support/documentation/ip_documentation/ila/v6_1/pg172-ila.pdf
 [30]: ../common/VhdlCodingStyle.docx
+[31]: ../common/devices/fpga_7series/vc709/vc709_basic_constraints_file.xdc
