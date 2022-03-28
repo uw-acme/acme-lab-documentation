@@ -34,8 +34,8 @@
 ["The RD53B-CMS Pixel Readout Chip Manual"][11]
 
 ### Aurora
-["Aurora 64B/66B Protocol Specification" - Xilinix][12]
-["LogiCORE IP Aurora 64B/66B v7.1 User Guide" - Xilinix][13]
+["Aurora 64B/66B Protocol Specification" - Xilinx][12]
+["LogiCORE IP Aurora 64B/66B v7.1 User Guide" - Xilinx][13]
 
 ## Pixel IBL Docs
 link to Pixel directory or readme?
@@ -43,9 +43,9 @@ link to Pixel directory or readme?
 ## FPGA Docs
 
 ### Series 7 Family
-["7 Series FPGAs Data Sheet: Overview" - Xilinix][14]
-["7 Series FPGAs GTP Transceivers User Guide" - Xilinix][15]
-["7 Series FPGAs SelectIO Resources User Guide" - Xilinix][16]
+["7 Series FPGAs Data Sheet: Overview" - Xilinx][14]
+["7 Series FPGAs GTP Transceivers User Guide" - Xilinx][15]
+["7 Series FPGAs SelectIO Resources User Guide" - Xilinx][16]
 ["7 Series FPGAs Clocking Resources User Guide"][17]
 
 
@@ -61,9 +61,9 @@ link to Pixel directory or readme?
 ## Tutorials
 
 ### Vivado
-["Vivado Tutorial" - Xilinix (22 pages)][22]
-["Vivado Design Suite Tcl Command Reference Guide" - Xilinix][23]
-["Vivado Design Suite User Guide Programming and Debugging" - Xilinix][24]
+["Vivado Tutorial" - Xilinx (22 pages)][22]
+["Vivado Design Suite Tcl Command Reference Guide" - Xilinx][23]
+["Vivado Design Suite User Guide Programming and Debugging" - Xilinx][24]
 
 ### Modelsim
 
