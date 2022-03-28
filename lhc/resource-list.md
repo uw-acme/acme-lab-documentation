@@ -7,7 +7,7 @@
 [rd53a_hardware_emulator_dev][3]
 **TODO: Add Donovan's Decoder repo**
 
-## Thesese
+## Theses
 
 [All Professor Hauck Publications][4]
 
@@ -22,6 +22,11 @@
 ### Aurora
 ["FPGA Development of an Emulator Framework and a High Speed I/O Core for the ITk Pixel Upgrade" - Lev Kurilenko][9]
 
+### IBL ROD
+["Three Generations of FPGA DAQ Development for the ATLAS Pixel Detector" - Joseph Mayer][]
+["An Introduction to ATLAS Pixel Detector DAQ and Calibration Software Based on a Year's Work at CERN for the Upgrade from 8 to 13 TeV" - Nick Dreyer][]
+["Readout Driver Firmware Development for the ATLAS Insertable B-Layer" - Shaw-Pin Chen][]
+ 
 ## RD53 Manuals and Docs
 
 ### RD53B
@@ -31,6 +36,9 @@
 ### Aurora
 ["Aurora 64B/66B Protocol Specification" - Xilinix][12]
 ["LogiCORE IP Aurora 64B/66B v7.1 User Guide" - Xilinix][13]
+
+## Pixel IBL Docs
+link to Pixel directory or readme?
 
 ## FPGA Docs
 
