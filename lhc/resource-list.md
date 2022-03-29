@@ -23,9 +23,9 @@
 ["FPGA Development of an Emulator Framework and a High Speed I/O Core for the ITk Pixel Upgrade" - Lev Kurilenko][9]
 
 ### IBL ROD
-["Three Generations of FPGA DAQ Development for the ATLAS Pixel Detector" - Joseph Mayer][]
-["An Introduction to ATLAS Pixel Detector DAQ and Calibration Software Based on a Year's Work at CERN for the Upgrade from 8 to 13 TeV" - Nick Dreyer][]
-["Readout Driver Firmware Development for the ATLAS Insertable B-Layer" - Shaw-Pin Chen][]
+["Three Generations of FPGA DAQ Development for the ATLAS Pixel Detector" - Joseph Mayer][32]
+["An Introduction to ATLAS Pixel Detector DAQ and Calibration Software Based on a Year's Work at CERN for the Upgrade from 8 to 13 TeV" - Nick Dreyer][33]
+["Readout Driver Firmware Development for the ATLAS Insertable B-Layer" - Shaw-Pin "Bing" Chen][34]
  
 ## RD53 Manuals and Docs
 
@@ -38,7 +38,8 @@
 ["LogiCORE IP Aurora 64B/66B v7.1 User Guide" - Xilinx][13]
 
 ## Pixel IBL Docs
-link to Pixel directory or readme?
+[Go to the Pixel IBL directory here][35]
+[Pixel IBL Resource list][36]
 
 ## FPGA Docs
 
@@ -72,12 +73,14 @@ link to Pixel directory or readme?
 [Modelsim Setup Tutorial Ubuntu][26]
 ### ILAs
 
-[ILA Tutoria Project][27]
+[ILA Tutorial Project][27]
 [Xilinx ILA (Integrated Logic Analyzer) - Lev Kurilenko - Slide Deck][28]
 ["Integrated Logic Analyzer - LogiCORE IP Product Guide"][29]
 
 ### Coding Style
 ["VHDL Coding Style" - Geoff Jones][30]]
+Another good resource for learning VHDL- Computer Architecture and Digital Design- Harris & Harris
+(Textbook chapter has side by side comparison of VHDL and Verilog)
 
 <!-- Links -->
 [1]: https://gitlab.com/scotthauck/largehadroncollider
@@ -111,3 +114,10 @@ link to Pixel directory or readme?
 [29]: ../common/tutorials/vivado/vivado-ila.pdf <!-- https://www.xilinx.com/support/documentation/ip_documentation/ila/v6_1/pg172-ila.pdf
 [30]: ../common/VhdlCodingStyle.docx
 [31]: ../common/devices/fpga_7series/vc709/vc709_basic_constraints_file.xdc
+[32]:  ./thesese/Joe_Mayer_Thesis.pdf
+[33]:  ./thesese/NickDreyer_Thesis.pdf
+[34]:  ./thesese/BingThesis.pdf
+[35]:  ./Pixel_IBL
+[36]: ./Pixel_IBL/Pixel_IBL_resource_list.md
+
+
