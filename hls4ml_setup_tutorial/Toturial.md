@@ -9,6 +9,8 @@ This tutorial will guide you on setting up the environment you need to run HLS4M
 ## System requirment
 We recommend using Linux as the OS, so if you are using Linux or have Linux virtual machine on your computer, you may continue from step 2. If you are using Windows as your OS, we highly recommend using a feature called Windows Subsystem for Linux, aka WSL to run Linux. You may also build a virtual machine by yourself, but this tutorial will only teach you how to use WSL. (We currently don’t know how to build environment on MacOS, if you are using MacOS, please contact Professor or Elham for help)
 
+Also remember to make sure your personal device have at least 80 - 100 GB free storage for confidently install all the software and packages for hls4ml.
+
 ## Step 1: Setup the WSL(Windows Subsystem for Linux) for Window machine
 
 In the taskbar, click the tool and type in “Turn Windows Feature On or Off”,
