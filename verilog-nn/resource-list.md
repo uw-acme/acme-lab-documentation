@@ -2,9 +2,10 @@
 
 ## Repos
 
-[HLS4ML_customML - Anatoliy Martynyuk][1]
-[fastmachinelearning/hls4ml][2]
-[fastmachinelearning/hls4ml-tutorial][3]
+[HLS4ML_customML - Anatoliy Martynyuk][1]<br> 
+[fastmachinelearning/hls4ml][2]<br> 
+[fastmachinelearning/hls4ml-tutorial][3]<br> 
+[Matthew's Repo for One Layer and Conv 2D files][31]<br> 
 
 ## Thesese
 
@@ -13,17 +14,17 @@
 ## HLS & ML
 
 ### Comprehensive ML Resources
-[CS231n Convolutional Neural Networks for Visual Recognition][5]
-[Neural Networks and Deep Learning][6]
+[CS231n Convolutional Neural Networks for Visual Recognition][5]<br> 
+[Neural Networks and Deep Learning][6]<br> 
 
 ### Short Primers on ML
-["A General Neural Network Hardware Architecture on FPGA" - Yufeng Hao][7]
-["Implementation of Data-optimized FPGA-based Accelerator for Convolutional Neural Network" - Mannhee Cho; Youngmin Kim][8]
+["A General Neural Network Hardware Architecture on FPGA" - Yufeng Hao][7]<br> 
+["Implementation of Data-optimized FPGA-based Accelerator for Convolutional Neural Network" - Mannhee Cho; Youngmin Kim][8]<br> 
 
 ### Extra ML Resources
-["Using Xilinx FPGAs to implement neural networks and fuzzy systems" - JJ Blake][9]
-["Accelerator Design with Effective Resource Utilization for Binary Convolutional Neural Networks on an FPGA" - Sunwoong Kim][10]
-["The Implementation of a Power Efficient BCNN-Based Object Detection Acceleration on a Xilinx FPGA-SoC" - Heekyung Kim][11]
+["Using Xilinx FPGAs to implement neural networks and fuzzy systems" - JJ Blake][9]<br> 
+["Accelerator Design with Effective Resource Utilization for Binary Convolutional Neural Networks on an FPGA" - Sunwoong Kim][10]<br> 
+["The Implementation of a Power Efficient BCNN-Based Object Detection Acceleration on a Xilinx FPGA-SoC" - Heekyung Kim][11]<br> 
 
 ### HLS4ML
 [HLS4ML Documentation Homepage][12]
@@ -32,39 +33,39 @@
 ## FPGA Docs
 
 ### Series 7 Family
-["7 Series FPGAs Data Sheet: Overview" - Xilinix][13]
-["7 Series FPGAs GTP Transceivers User Guide" - Xilinix][14]
-["7 Series FPGAs SelectIO Resources User Guide" - Xilinix][15]
-["7 Series FPGAs Clocking Resources User Guide"][16]
+["7 Series FPGAs Data Sheet: Overview" - Xilinix][13]<br> 
+["7 Series FPGAs GTP Transceivers User Guide" - Xilinix][14]<br> 
+["7 Series FPGAs SelectIO Resources User Guide" - Xilinix][15]<br> 
+["7 Series FPGAs Clocking Resources User Guide"][16]<br> 
 
 ### Multiplication Optimization
-["Convolutional Neural Network with INT4 Optimization on Xilinx Devices" - Xilinix][17]
-["Deep Learning with INT8 Optimization on Xilinx Device" - Xilinix][18]
+["Convolutional Neural Network with INT4 Optimization on Xilinx Devices" - Xilinix][17]<br> 
+["Deep Learning with INT8 Optimization on Xilinx Device" - Xilinix][18]<br> 
 
 ### VC709
-[Product Page with Documentation][20]
-["VC709 Evaluation Board for the Virtex-7 FPGA - User Guide"][21]
+[Product Page with Documentation][20]<br> 
+["VC709 Evaluation Board for the Virtex-7 FPGA - User Guide"][21]<br> 
 
 ## Tutorials
 
 ### Vivado
-["Vivado Tutorial" - Xilinix (22 pages)][22]
-["Vivado Design Suite Tcl Command Reference Guide" - Xilinix][23]
-["Vivado Design Suite User Guide Programming and Debugging" - Xilinix][24]
+["Vivado Tutorial" - Xilinix (22 pages)][22]<br> 
+["Vivado Design Suite Tcl Command Reference Guide" - Xilinix][23]<br> 
+["Vivado Design Suite User Guide Programming and Debugging" - Xilinix][24]<br> 
 
 ### Modelsim
 
 **TODO: mention the need of HuskyVPN if using modelsim off campus**.<br>
-[Modelsim Setup Tutorial][25]
-[Modelsim Setup Tutorial Ubuntu][26]
+[Modelsim Setup Tutorial][25]<br> 
+[Modelsim Setup Tutorial Ubuntu][26]<br> 
 ### ILAs
 
-[ILA Tutoria Project][27]
-[Xilinx ILA (Integrated Logic Analyzer) - Lev Kurilenko - Slide Deck][28]
-["Integrated Logic Analyzer - LogiCORE IP Product Guide"][29]
+[ILA Tutoria Project][27]<br> 
+[Xilinx ILA (Integrated Logic Analyzer) - Lev Kurilenko - Slide Deck][28]<br> 
+["Integrated Logic Analyzer - LogiCORE IP Product Guide"][29]<br> 
 
 ### Coding Style
-["VHDL Coding Style" - Geoff Jones][32]
+["VHDL Coding Style" - Geoff Jones][32]<br> 
 
 <!-- Links -->
 [1]: https://gitlab.com/AnatoliyMartynyuk/hls4ml_customml 
@@ -73,6 +74,7 @@
 [4]: https://people.ece.uw.edu/hauck/publications.html
 [5]: https://cs231n.github.io/
 [6]: http://neuralnetworksanddeeplearning.com/
+[31]:https://github.com/mbavier/HLS4ML_VerilogAndC/tree/main/singleLayer/firmware
 [7]: ./whitepapers/A_General_Neural_Network_Hardware_Architecture_on_FPGA.pdf <!-- https://arxiv.org/ftp/arxiv/papers/1711/1711.05860.pdf
 [8]: ./whitepapers/Implementation_of_Data-optimized_FPGA-based_Accelerator_for_Convolutional_Neural_Network.pdf <!-- https://ieeexplore-ieee-org.offcampus.lib.washington.edu/document/9050993
 [9]: ./whitepapers/Using_Xilinx_FPGAs_to_implement_neural_networks_and_fuzzy_systems.pdf <!-- https://ieeexplore-ieee-org.offcampus.lib.washington.edu/document/643114
@@ -97,3 +99,4 @@
 [28]: ../common/tutorials/vivado/Xilinx_ILA_(Integrated_Logic_Analyzer)_Lev_Kurilenko.pdf <!-- https://gitlab.com/scotthauck/largehadroncollider/-/blob/master/Documents/Tutorial/ILA/Xilinx_ILA_Integrated_Logic_Analyzer_Lev_Kurilenko.pdf
 [29]: ../common/tutorials/vivado/vivado-ila.pdf <!-- https://www.xilinx.com/support/documentation/ip_documentation/ila/v6_1/pg172-ila.pdf
 [30]: ../common/VhdlCodingStyle.docx
+
