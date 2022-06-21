@@ -5,6 +5,7 @@
 [rd53b_hardware_emulator - Hauck - largehardroncollider][1]
 [rd53b_emulator - Niharika - rd53b_emulator][2]
 [rd53a_hardware_emulator_dev][3]
+[YARR-rx-recovery][]
 **TODO: Add Donovan's Decoder repo**
 
 ## Theses
@@ -119,5 +120,5 @@ Another good resource for learning VHDL- Computer Architecture and Digital Desig
 [34]:  ./thesese/BingThesis.pdf
 [35]:  ./Pixel_IBL
 [36]: ./Pixel_IBL/Pixel_IBL_resource_list.md
-
+[37]: https://github.com/AnatoliyMartynyuk/YARR-rx-recovery 
 
