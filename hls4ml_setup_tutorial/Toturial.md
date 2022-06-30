@@ -217,20 +217,23 @@ In the Linux terminal, run the following commands in order:
 ```
 sudo apt-get purge xrdp
 ```
-``` sudo apt install -y xrdp
 ```
-``` sudo apt install -y xfce4
+sudo apt install -y xrdp
 ```
-``` sudo apt install -y xfce4-goodies
+```
+sudo apt install -y xfce4
+```
+```
+sudo apt install -y xfce4-goodies
 ```
 
 What we did above is to install a server deployer and a graphic user interface to our WSL, so later we can use Windows remote desktop connection feature to connect our WSL to have a graphic interface.
 
 ```
 sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak
- sudo sed -i ‘s/3389/3390/g’ /etc/xrdp/xrdp.ini
- sudo sed -i ‘s/max_bpp=32/#max_bpp=32\nmax_bpp=128/g’ /etc/xrdp/xrdp.ini
- sudo sed -i ‘s/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g’ /etc/xrdp/xrdp.ini echo xfce4-session > ~/.xsession
+|sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini
+|sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini
+|sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini|echo xfce4-session > ~/.xsession
 ```
 
 What we did here is doing some adjustment on the user interface and make sure that this server can enable our user interface properly. So we first make a backup of the xrdp.ini file in case we messed up. Then we change the connection port from 3389 to 3390, you can change whatever port you want, but recommend at least over 3300 and lower than 31000. Then we change the resolution for the interface to make it not blur, at the end we add xfce4-session in to the 
