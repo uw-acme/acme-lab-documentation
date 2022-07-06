@@ -13,12 +13,16 @@ These will be upgraded to RD53 front end chips and another readout system(FELIX/
 ### Theses 
 Very useful background information on Pixel/IBL
 [Shaw-Pin "Bing" Chen 2014 - IBL ROD Firmware Development][1]
+
 [Joe Mayer 2016 - Three Generations of FPGA DAQ Development][2]
+
 [Nick Dreyer 2016 - Calibration Software][3]
+
 (Info on TDAQ system- Calibration focused; Has useful comparisons between Pixel & IBL)
 
 ### CERN Repos (need CERN account and permissions) 
 ATLAS Pixel DAQ   https://gitlab.cern.ch/atlas-pixel/daq/atlaspixeldaq
+
 Pixel ROD FW      https://gitlab.cern.ch/atlas-pixel/daq/pixelrod_firmware
 
 
