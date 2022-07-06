@@ -38,7 +38,7 @@ SR1 is a testing facility at CERN that can also be accessed remotely
 ### Resources related to Histogrammer task (2021-2022) 
 [Problem description, supplementary material on histogrammer][10]
 
-### Resources related to Smart L1A task (currently not being worked on) 
+### Resources related to Smart L1A task (summer 2022 - ) 
 [Problem description and supplementary material on Smart L1A task][11]
 
 ### ATLAS DAQ Specific Git Tutorial 
