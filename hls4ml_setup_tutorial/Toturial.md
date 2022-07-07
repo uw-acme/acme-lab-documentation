@@ -13,6 +13,7 @@ Also remember to make sure your personal device have at least 80 - 100 GB free s
 
 ## Step 1: Setup the WSL(Windows Subsystem for Linux) for Window machine
 
+####1.
 In the taskbar, click the tool and type in “Turn Windows Feature On or Off”,
 ![](./image/part101.png)
 
@@ -27,6 +28,7 @@ Then select the Windows Subsystem for Linux and click OK.
 You may have some error code, generally it is due to old version of your current windows, update your windows should fix the problem. 
 ![](./image/part105.jpeg)
 
+####2. 
 Now you have enabled the feature, it is time to get a Linux for you. We recommend using Linux 18.04 LTS (Long term support version) as your Linux version. There are two ways to do so. You may download it from Microsoft Store, just search Linux 18.04 LTS. 
 
 If you don’t want to install it in your C disk, you may download it from this [link] (https://drive.google.com/file/d/1yBP0fodQXuzFd9DRWxg6J7Xh2v59tvY6/view?usp=sharing)
@@ -34,8 +36,34 @@ If you don’t want to install it in your C disk, you may download it from this 
 For people who want download it to the place you want (which means you may install this on a flash drive or a portable hard drive), once you have the zip file, unzip it to a folder and you will see:
 
 Then click the ubuntu1804.exe or open it from Microsoft Store or Quick Start Menu if you downloaded it from there. A terminal will pop up and Linux will start its initial set up, it will take a few minutes. Then it will ask you to set a username and password as its administrator
+![](./image/new_1.png)
 
-Please set your username with a lowercase alphabet start and no space between each word. Then type in:
+Please set your username with a lowercase alphabet start and no space between each word. 
+
+Now, we need to make sure that the WSL you just installed is version 2, this is a preparation work for later Vivado installation. Open the Windows Powershell, type in 
+```
+wsl -l -v
+```
+, then you can check what version your wsl is.
+![](./image/new_2.png)
+
+If it is not version 2, here is what you need to do.
+
+a. [Visit here] (https://aka.ms/wsl2), under install tag, go to Manual install steps for older version, you can find a download link called WSL2 Linux kernel update package for x64 machines, download it and install.
+
+b. In windows powershell, type in 
+```
+wsl --set-version Ubuntu-18.04 2
+```
+, this command will upgrade your wsl into version 2, it might take few minutes, wait till the terminal says conversion complete.
+
+c. In windows powershell, type in 
+```
+wsl –set-default-version 2
+```
+, this command will set the default version into 2 in case you want to install more wsl.
+
+Now back to the Linux terminal and type in:
 
 ```
 sudo apt update 
@@ -95,7 +123,7 @@ vim ~/.bash_profile
 - Press ENTER.
  
 - Press i to change the vim into insert mode.
-- Copy and paste the following things into the terminal. Change the <YOUR USERNAME > part into your username that you set in the step 1.
+- Copy and paste the following things into the terminal. Change the '<YOUR USERNAME >` part into your username that you set in the step 1.
 
 ```
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
@@ -117,7 +145,10 @@ alias jupyter-notebook="/home/<YOUR USERNAME>/miniconda3/envs/hls4ml-tutorial/bi
  source ~/.bashrc
 ```
 
-After making the configuration, it is time to download hls4ml into your Linux,
+After making the configuration, run `conda config --set auto_activate_base false` to make sure that conda won’t activate base environment every time you turn on the terminal.
+
+
+Now it is time to download hls4ml into your Linux,
 run the following command:
 ```
 git clone https://github.com/fastmachinelearning/hls4ml-tutorial.git
@@ -174,9 +205,9 @@ Copy one of these URL into the browser, and you may access your directory in you
 
 If everything goes smoothly, you should look something like this:
 ![](./image/notebook_1.png)
-This is my linux home directory, yours definitely going to looks different. In your directory, find the folder hls4ml-tutorial, and inside, you should be able to see these:
+This is my linux home directory, yours definitely going to looks different. In your directory, find the folder _hls4ml-tutorial_, and inside, you should be able to see these:
 ![](./image/notebook_2.png)
-Click part1\_getting\_started.ipynb and run the Part 1 code, you may have some error saying not able to access dynamic library, it just means it cannot detect your GPU and it will continue process with your CPU.
+Click _part1\_getting\_started.ipynb_ and run the Part 1 code, you may have some error saying not able to access dynamic library, it just means it cannot detect your GPU and it will continue process with your CPU.
 ![](./image/notebook_3.png)
 
 You probably are going to encounter some errors when running these codes, one common error is that it cannot find Keras or cannot Import TensorFlow properly, in that case, you need to reinstall TensorFlow. Close Jupyter notebook and go back to linux terminal. In the terminal, press
@@ -233,16 +264,13 @@ sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak
  sudo sed -i ‘s/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g’ /etc/xrdp/xrdp.ini echo xfce4-session > ~/.xsession
 ```
 
-What we did here is doing some adjustment on the user interface and make sure that this server can enable our user interface properly. So we first make a backup of the xrdp.ini file in case we messed up. Then we change the connection port from 3389 to 3390, you can change whatever port you want, but recommend at least over 3300 and lower than 31000. Then we change the resolution for the interface to make it not blur, at the end we add xfce4-session in to the 
-```
-.xsession
-```
-file to make it recognize the interface.
+What we did here is doing some adjustment on the user interface and make sure that this server can enable our user interface properly. So we first make a backup of the _xrdp.ini_ file in case we messed up. Then we change the connection port from 3389 to 3390, you can change whatever port you want, but recommend at least over 3300 and lower than 31000. Then we change the resolution for the interface to make it not blur, at the end we add _xfce4-session_ in to the _.xsession_ file to make it recognize the interface.
 
-Now we need to make sure that every time we launch the server, it will use the user interface instead of default UI. We need to modify the startwm.sh file using VIM by the following command:
+Now we need to make sure that every time we launch the server, it will use the user interface instead of default UI. We need to modify the _startwm.sh_ file using VIM by the following command:
 ```
 sudo vim /etc/xrdp/startwm.sh
 ```
+
 Once inside the file, we need to comment out these two lines by adding # signal in front 
 From:
 
@@ -285,53 +313,30 @@ In the Computer line, type localhost:3390, and then connect.
 
 Use the same username and password you created in the pervious part to login.
 
-When you get inside the server, right click can callout a menu which you can get a terminal from there. In the terminal, type in “sudo apt install firefox” to get a web browser for you.
+When you get inside the server, right click can callout a menu which you can get a terminal from there. In the terminal, type in `sudo apt install firefox` to get a web browser for you.
 
 ![](./image/display2.png)
 
 Once installed, you can access it from the bottom menu.
 Now you have your own GUI for operation linux, but this GUI is mainly for install vivado. So moving on.
 
-For our hls4ml, we recommand using 2019.1 version of the Vivado which can be downloaded from this [Google Drive] (https://drive.google.com/file/d/1WO01bS3iN9yfolHHp8Ei3jNzKc60Y-Zb/view?usp=sharing)
+Download vivado from [google drive] (https://drive.google.com/file/d/1WO01bS3iN9yfolHHp8Ei3jNzKc60Y-Zb/view)
+or from the [official website] (https://www.xilinx.com/support/download.html)
 
-From this google drive you will downloaded a bin file.
-Then you need to first put this file from Windows system into your Linux system. 
+we recommend to download from our drive because the tutorial uses the same version as we provided. But if you decided to download from the website, it has to be 2019.1 or 2019.2 version.
 
-You can always check what file you have in your system by using the command 
-```
-ls
-```
-
-![](./image/vivado1.jpg)
+Once downloaded, you can access the file from Download folder. To run the file, you need to do the following since it is a bin file.
 
 
-
-After you can find the file in your Linux we can started install it.
-If you directly run 
-```
-./Xilinx_Vivado_SDK_Web_2019.1_0524_1430_Lin64.bin
-```
-you will find it is not working. This is because of the file is not runable by defult.
-We have to use this command to change the file into readable writeable and executable file:
-```
-chmod +777 ./Xilinx_Vivado_SDK_Web_2019.1_0524_1430_Lin64.bin
-```
-You can also tye
+Type
 ```
 chmod +777 ./X
 ```
 then press Tab, it will auto fill the rest file name for you.
+This command will help change the file into readable writeable and executable file.
 
-Then we can use this command to install vivado:
-```
-sudo ./Xilinx_Vivado_SDK_Web_2019.1_0524_1430_Lin64.bin
-```
 
-In here we do not use the command 
-```
-./Xilinx_Vivado_SDK_Web_2019.1_0524_1430_Lin64.bin
-```
-because we need to do it wil admin privilages or otherwise it will still not runable.
+Then type `./X` then press Tab and Enter to start the install program.
 
 ![](./image/vivado2.png)
 
@@ -345,43 +350,48 @@ Vivado takes at least 68 GB to install.
 
 When you finally finished installing, you will need to do similar process that you did in conda step to make sure Linux recognize the Vivado you installed.
 
-Type 
+a) Type 
 ```
 vim ~/.bash_profile
 ```
 and press ENTER.
-Press i to change the vim into insert mode.
-Copy and paste the following things into the end of the file. Change the <YOUR USERNAME > part into your username that you set in the step 1.
+
+b) Press `i` to change the vim into insert mode.
+
+c) Copy and paste the following things into the end of the file. Change the `<YOUR USERNAME>` part into your username that you set in the step 1.
 ```
 export PATH="/tools/Xilinx/Vivado/2019.1/bin:$PATH"
 ```
-Press ESC and type 
+
+d) Press ESC and type 
 ```
 :wq
 ```
 
-Type 
+e) Type 
 ```
 vim ~/.bashrc
 ```
 and press ENTER.
-Press i to change the vim into insert mode.
-Copy and paste the following things into the end of the file. Change the <YOUR USERNAME > part into your username that you set in the step 1.
+
+f) Press `i` to change the vim into insert mode.
+
+g) Copy and paste the following things into the end of the file. Change the `<YOUR USERNAME>` part into your username that you set in the step 1.
 
 ```
 export PATH="/home/<YOUR USERNAME>/miniconda3/bin:$PATH"
 
 alias jupyter-notebook="/home/<YOUR USERNAME>/miniconda3/envs/hls4ml-tutorial/bin/jupyter-notebook --no-browser"
 
-export PATH="/tools/Xilinx/Vivado/2019.1/bin:$PATH
+export PATH="/tools/Xilinx/Vivado/2019.1/bin:$PATH"
 ```
 	
-Press ESC and type 
+h) Press ESC and type 
 ```
 :wq
 ```
 
-Once you exit vim, run 
+i) Once you exit vim, run 
 ```
 source ~/.bash_profile
 ```
