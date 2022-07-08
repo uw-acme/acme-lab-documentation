@@ -247,12 +247,9 @@ Now you should be able to run all steps in tutorial 1 besides the last, the last
 In the Linux terminal, run the following commands in order:
 ```
 sudo apt-get purge xrdp
-```
-``` sudo apt install -y xrdp
-```
-``` sudo apt install -y xfce4
-```
-``` sudo apt install -y xfce4-goodies
+sudo apt install -y xrdp
+sudo apt install -y xfce4
+sudo apt install -y xfce4-goodies
 ```
 
 What we did above is to install a server deployer and a graphic user interface to our WSL, so later we can use Windows remote desktop connection feature to connect our WSL to have a graphic interface.
