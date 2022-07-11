@@ -13,7 +13,7 @@ After opening the project, user can try to test different APUs by replacing the 
  
 Since the file is very large that cannot be uploaded to git, please use googledrive for [downloading](https://drive.google.com/drive/folders/1cKuS-S-VVroibXRjvmvwAXuOWIhkrU9V?usp=sharing)
 
-
+User to will use ILA to display the signals. A tutorial of adding ILA can be found at [here](http://web.mit.edu/6.111/www/f2017/handouts/labs/ila.html)
 
 
 ## Authors
