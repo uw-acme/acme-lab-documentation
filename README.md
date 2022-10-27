@@ -18,10 +18,10 @@
     |-- resourse-list.md    <!-- comprehensive set of resources and their links for the verilog-nn group -->
     |-- whitepapaers        <!-- whitepapers/pulications on Xilinix and FPGA ML applications -->
 
-### Discription
+### Description
 Collection of documents, links and other resources for UW's ACME Lab. Some of these resources are currently tracked as external links and may require CERN or UW authentication and internet connection to access.
 
-To use, just open the folder named after the acme lab groups and view files for a list of links, titles and discriptions to documents and other resources. For additional help refer to the README within the group folder.
+To use, just open the folder named after the acme lab groups and view files for a list of links, titles and descriptions to documents and other resources. For additional help refer to the README within the group folder.
 
 ### How to Contribute
 - When making changes to folder or file names, please be thorough in revising every internal link.
