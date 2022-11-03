@@ -1,0 +1,101 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD2FE5A308408D8F8",
+      "device": "xc7vx690tffg1761-2",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "myproject_0": "",
+      "pcie3_7x_0": "",
+      "clk_wiz": ""
+    },
+    "ports": {
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "clk_100MHz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_100MHz",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "myproject_0": {
+        "vlnv": "xilinx.com:hls:myproject:1.0",
+        "xci_name": "design_1_myproject_0_0"
+      },
+      "pcie3_7x_0": {
+        "vlnv": "xilinx.com:ip:pcie3_7x:4.3",
+        "xci_name": "design_1_pcie3_7x_0_0"
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0",
+        "parameters": {
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "pcie3_7x_0/sys_clk"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "clk_wiz/reset"
+        ]
+      },
+      "clk_100MHz_1": {
+        "ports": [
+          "clk_100MHz",
+          "clk_wiz/clk_in1"
+        ]
+      },
+      "pcie3_7x_0_user_clk": {
+        "ports": [
+          "pcie3_7x_0/user_clk",
+          "myproject_0/ap_clk"
+        ]
+      }
+    }
+  }
+}

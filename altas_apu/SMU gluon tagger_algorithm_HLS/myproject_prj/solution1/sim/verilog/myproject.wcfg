@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="myproject.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_myproject_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="group1">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group2">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group3">
+            <obj_property name="label">const_size_out_1(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/const_size_out_1_ap_vld">
+               <obj_property name="ElementShortName">const_size_out_1_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">const_size_out_1_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/AESL_inst_myproject/const_size_out_1">
+               <obj_property name="ElementShortName">const_size_out_1[15:0]</obj_property>
+               <obj_property name="ObjectShortName">const_size_out_1[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group6">
+            <obj_property name="label">const_size_in_1(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/const_size_in_1_ap_vld">
+               <obj_property name="ElementShortName">const_size_in_1_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">const_size_in_1_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/AESL_inst_myproject/const_size_in_1">
+               <obj_property name="ElementShortName">const_size_in_1[15:0]</obj_property>
+               <obj_property name="ObjectShortName">const_size_in_1[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group9">
+            <obj_property name="label">layer13_out(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/layer13_out_V_data_1_V_TREADY">
+               <obj_property name="ElementShortName">layer13_out_V_data_1_V_TREADY</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_1_V_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/layer13_out_V_data_1_V_TVALID">
+               <obj_property name="ElementShortName">layer13_out_V_data_1_V_TVALID</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_1_V_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/layer13_out_V_data_0_V_TREADY">
+               <obj_property name="ElementShortName">layer13_out_V_data_0_V_TREADY</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_0_V_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/layer13_out_V_data_0_V_TVALID">
+               <obj_property name="ElementShortName">layer13_out_V_data_0_V_TVALID</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_0_V_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/AESL_inst_myproject/layer13_out_V_data_1_V_TDATA">
+               <obj_property name="ElementShortName">layer13_out_V_data_1_V_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_1_V_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/AESL_inst_myproject/layer13_out_V_data_0_V_TDATA">
+               <obj_property name="ElementShortName">layer13_out_V_data_0_V_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_0_V_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group16">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group17">
+            <obj_property name="label">conv2d_input(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/conv2d_input_V_data_0_V_TREADY">
+               <obj_property name="ElementShortName">conv2d_input_V_data_0_V_TREADY</obj_property>
+               <obj_property name="ObjectShortName">conv2d_input_V_data_0_V_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/conv2d_input_V_data_0_V_TVALID">
+               <obj_property name="ElementShortName">conv2d_input_V_data_0_V_TVALID</obj_property>
+               <obj_property name="ObjectShortName">conv2d_input_V_data_0_V_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/AESL_inst_myproject/conv2d_input_V_data_0_V_TDATA">
+               <obj_property name="ElementShortName">conv2d_input_V_data_0_V_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">conv2d_input_V_data_0_V_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group21">
+         <obj_property name="label">Block-level IO Handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_idle">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group26">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_rst_n">
+            <obj_property name="ElementShortName">ap_rst_n</obj_property>
+            <obj_property name="ObjectShortName">ap_rst_n</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group28">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_clk">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group30">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group31">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group32">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_myproject_top/AUTOTB_TRANSACTION_NUM">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/ready_cnt">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/done_cnt">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group33">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_myproject_top/LENGTH_conv2d_input_V_data_0_V">
+               <obj_property name="ElementShortName">LENGTH_conv2d_input_V_data_0_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_conv2d_input_V_data_0_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/LENGTH_layer13_out_V_data_0_V">
+               <obj_property name="ElementShortName">LENGTH_layer13_out_V_data_0_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_layer13_out_V_data_0_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/LENGTH_layer13_out_V_data_1_V">
+               <obj_property name="ElementShortName">LENGTH_layer13_out_V_data_1_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_layer13_out_V_data_1_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/LENGTH_const_size_in_1">
+               <obj_property name="ElementShortName">LENGTH_const_size_in_1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_const_size_in_1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/LENGTH_const_size_out_1">
+               <obj_property name="ElementShortName">LENGTH_const_size_out_1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_const_size_out_1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group42">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group43">
+            <obj_property name="label">const_size_out_1(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/const_size_out_1_ap_vld">
+               <obj_property name="ElementShortName">const_size_out_1_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">const_size_out_1_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/const_size_out_1">
+               <obj_property name="ElementShortName">const_size_out_1[15:0]</obj_property>
+               <obj_property name="ObjectShortName">const_size_out_1[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group46">
+            <obj_property name="label">const_size_in_1(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/const_size_in_1_ap_vld">
+               <obj_property name="ElementShortName">const_size_in_1_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">const_size_in_1_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/const_size_in_1">
+               <obj_property name="ElementShortName">const_size_in_1[15:0]</obj_property>
+               <obj_property name="ObjectShortName">const_size_in_1[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group49">
+            <obj_property name="label">layer13_out(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/layer13_out_V_data_1_V_TREADY">
+               <obj_property name="ElementShortName">layer13_out_V_data_1_V_TREADY</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_1_V_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/layer13_out_V_data_1_V_TVALID">
+               <obj_property name="ElementShortName">layer13_out_V_data_1_V_TVALID</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_1_V_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/layer13_out_V_data_0_V_TREADY">
+               <obj_property name="ElementShortName">layer13_out_V_data_0_V_TREADY</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_0_V_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/layer13_out_V_data_0_V_TVALID">
+               <obj_property name="ElementShortName">layer13_out_V_data_0_V_TVALID</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_0_V_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/layer13_out_V_data_1_V_TDATA">
+               <obj_property name="ElementShortName">layer13_out_V_data_1_V_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_1_V_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/layer13_out_V_data_0_V_TDATA">
+               <obj_property name="ElementShortName">layer13_out_V_data_0_V_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">layer13_out_V_data_0_V_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group56">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group57">
+            <obj_property name="label">conv2d_input(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/conv2d_input_V_data_0_V_TREADY">
+               <obj_property name="ElementShortName">conv2d_input_V_data_0_V_TREADY</obj_property>
+               <obj_property name="ObjectShortName">conv2d_input_V_data_0_V_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/conv2d_input_V_data_0_V_TVALID">
+               <obj_property name="ElementShortName">conv2d_input_V_data_0_V_TVALID</obj_property>
+               <obj_property name="ObjectShortName">conv2d_input_V_data_0_V_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_myproject_top/conv2d_input_V_data_0_V_TDATA">
+               <obj_property name="ElementShortName">conv2d_input_V_data_0_V_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">conv2d_input_V_data_0_V_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

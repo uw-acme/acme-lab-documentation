@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="myproject" xd:componentRef="myproject" xd:initiationInterval="938" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="conv2d_input.data[0]" xd:originalName="conv2d_input" xd:direction="in" xd:interfaceRef="conv2d_input_V_data_0_V" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="layer13_out.data[0]" xd:originalName="layer13_out" xd:direction="out" xd:interfaceRef="layer13_out_V_data_0_V" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="layer13_out.data[1]" xd:originalName="layer13_out" xd:direction="out" xd:interfaceRef="layer13_out_V_data_1_V" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="const_size_in_1" xd:originalName="const_size_in_1" xd:direction="out" xd:interfaceRef="const_size_in_1" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="0"/>
+  <xd:arg xd:name="const_size_out_1" xd:originalName="const_size_out_1" xd:direction="out" xd:interfaceRef="const_size_out_1" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="0"/>
+  <xd:latencyEstimates xd:best-case="937" xd:worst-case="937" xd:average-case="937"/>
+  <xd:resourceEstimates xd:LUT="132261" xd:FF="69237" xd:BRAM="83" xd:DSP="3725"/>
+</xd:acceleratorMap>

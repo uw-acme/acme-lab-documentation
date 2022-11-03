@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Nov  2 20:39:04 2022
+# Process ID: 24720
+# Current directory: C:/Users/Jiang/WS/acme-lab-documentation/altas_apu/full_10bit_reuse1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12404 C:\Users\Jiang\WS\acme-lab-documentation\altas_apu\full_10bit_reuse1\Hls4MLTest.xpr
+# Log file: C:/Users/Jiang/WS/acme-lab-documentation/altas_apu/full_10bit_reuse1/vivado.log
+# Journal file: C:/Users/Jiang/WS/acme-lab-documentation/altas_apu/full_10bit_reuse1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only -part xcu200-fsgd2104-2-e C:/Users/Jiang/WS/acme-lab-documentation/altas_apu/full_10bit_reuse1/Hls4MLTest.xpr
+update_compile_order -fileset sources_1
