@@ -1,0 +1,80 @@
+Backend: Vivado
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    conv2d:
+      Precision:
+        bias: ap_fixed<16,6>
+        result: ap_fixed<16,6>
+        weight: ap_fixed<16,6>
+      ReuseFactor: 1
+    conv2d_1:
+      Precision:
+        bias: ap_fixed<16,6>
+        result: ap_fixed<16,6>
+        weight: ap_fixed<16,6>
+      ReuseFactor: 1
+    conv2d_1_relu:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      table_size: 1024
+      table_t: ap_fixed<18,8>
+    conv2d_2:
+      Precision:
+        bias: ap_fixed<16,6>
+        result: ap_fixed<16,6>
+        weight: ap_fixed<16,6>
+      ReuseFactor: 1
+    conv2d_2_relu:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      table_size: 1024
+      table_t: ap_fixed<18,8>
+    conv2d_input:
+      Precision:
+        result: ap_fixed<16,6>
+    conv2d_relu:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      table_size: 1024
+      table_t: ap_fixed<18,8>
+    dense:
+      Precision:
+        bias: ap_fixed<16,6>
+        result: ap_fixed<16,6>
+        weight: ap_fixed<16,6>
+      ReuseFactor: 1
+    dense_1:
+      Precision:
+        bias: ap_fixed<16,6>
+        result: ap_fixed<16,6>
+        weight: ap_fixed<16,6>
+      ReuseFactor: 1
+    dense_1_softmax:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      table_size: 1024
+      table_t: ap_fixed<18,8>
+    dense_relu:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      table_size: 1024
+      table_t: ap_fixed<18,8>
+    flatten:
+      ReuseFactor: 1
+    max_pooling2d:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+    max_pooling2d_1:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+  Model:
+    Precision: ap_fixed<10,4>
+    ReuseFactor: 1
+    Strategy: Latency
+IOType: io_stream
+KerasModel: !keras_model 'cnn_projects/full_10bit_reuse1/keras_model.h5'
+OutputDir: cnn_projects/full_10bit_reuse1
+ProjectName: vc709
+Stamp: 5aA3EC59
+XilinxPart: xc7vx690tffg1761-2
