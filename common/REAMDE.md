@@ -12,7 +12,7 @@ common                      <!-- files shared or relevant to all groups -->
         |-- vivado
         
         
-### Remote access to computing resources - Nautilius
+### Remote access to computing resources - Nautilus
 *Last Update - Feb 15, 2024*
 
 For any general computing requirements with GPUs, [JupyterHub](https://jupyterhub-west.nrp-nautilus.io) can be used.
