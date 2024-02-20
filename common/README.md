@@ -13,7 +13,7 @@ common                      <!-- files shared or relevant to all groups -->
         
         
 ### Remote access to computing resources - Nautilus
-*Last Update - Feb 15, 2024*
+*Last Update - Feb 15, 2024 by Pranav*
 
 For any general computing requirements with GPUs, [JupyterHub](https://jupyterhub-west.nrp-nautilus.io) can be used.
 
@@ -36,3 +36,24 @@ Steps to get access to coder:
  - If you need any other version of the tool, you can install in your home directory which is persistent storage.
  
 If you face any issues, you can reach out to the admins on [Element](https://element.nrp-nautilus.io/#/welcome).
+
+
+### Remote access to the computer in ECE 307-J
+*Last Update - Feb 19, 2024 by Pranav*
+
+The first step is to ensure the computer near the whiteboard in ECE 307J is powered ON and the ethernet is plugged in. 
+
+**If you're not on campus, before getting started you'll need to connect to UW's VPN - [Husky OnNet](https://itconnect.uw.edu/tools-services-support/networks-connectivity/husky-onnet/installing-configuring-and-using-husky-onnet/)**
+
+To access the computer through command line interface:
+
+ - Open the terminal in your computer
+ - Run "ssh user@dhcp196-246.ece.uw.edu" and enter the password for the computer
+ - If you don't know the password, reach out to Geoff(geoffhjones@msn.com) or Scott(hauck@uw.edu).
+ 
+To access the computer through graphical user interface:
+
+ - Open the terminal in your computer
+ - Run "ssh -v -C -L 5901:localhost:5901 user@dhcp196-246.ece.uw.edu" and enter the password for the computer.
+ - If you don't know the password, reach out to Geoff(geoffhjones@msn.com) or Scott(hauck@uw.edu).
+ - Use a VNC software like Tiger VNC and connect to the server "localhost:5901"
