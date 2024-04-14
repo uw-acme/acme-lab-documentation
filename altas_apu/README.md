@@ -56,6 +56,7 @@ pip3 install -e .
 git clone https://gitlab.com/PittHongGroup/fwX.git 
 cd fwX
 pip3 install -e .
+```
 
 ### Generating and Running the Algorithm Verilog File
 To generate the Verilog files of the algorithms, users can follow the tutorials provided by hls4ml and fwX:
