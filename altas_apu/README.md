@@ -1,12 +1,12 @@
-# AAIGEP (automatic algorithm inference in GEP)
+# AAIGEP (Automatic Algorithm Inference in GEP)
 
 **Paper Publication:**  
 "Machine Learning Evaluation in the Global Event Processor FPGA for the ATLAS Trigger Upgrade," JINST 2024  
 Authors: Zhixing Jiang, Ben Carlson, Allison Deiana, Jeff Eastlack, Scott Hauck, Shih-Chieh Hsu, Rohin Narayan, Santosh Parajuli, Dennis Yin, Bowen Zuo  
 [Paper](https://jinst.sissa.it/jinst/author/docPage.jsp?docId=JINST_054P_0324&docPgType=work)
 
-## Abstract
-AAIGEP is a guide for GEP developers to deploy ML models converted by fwx or hls4ml to the GEP framework. The concepts can also be applied to other acceleration processes for inferencing the models.
+## Introduction
+AAIGEP stands for Automatic Algorithm Inference in the Global Event Processor (GEP), where GEP is a critical, performance-driven component of the ATLAS experiment at the Large Hadron Collider (LHC). In this work, we introduce methods to automatically generate machine learning-based algorithms to integrate into the GEP framework. We utilize established machine learning to FPGA workflows, such as hls4ml and fwX, to significantly simplify the design process of these algorithms. Our findings highlight the potential of integrating machine learning into the GEP for high-energy physics applications, which can greatly enhance the efficiency of the trigger system, thereby allowing the ATLAS experiment to gather more data and achieve more scientific breakthroughs. The method can also be applied to other applications that require real-time processing of large volumes of data.
 
 ## News
 - **2024-03:** Our paper has been accepted to JINST 2024.
