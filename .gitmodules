@@ -1,0 +1,6 @@
+[submodule "altas_apu/hls4ml"]
+	path = altas_apu/hls4ml
+	url = git@github.com:fastmachinelearning/hls4ml.git
+[submodule "altas_apu/fwX"]
+	path = altas_apu/fwX
+	url = https://gitlab.com/PittHongGroup/fwX.git
