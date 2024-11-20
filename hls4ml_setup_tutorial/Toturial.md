@@ -317,6 +317,19 @@ When you get inside the server, right click can callout a menu which you can get
 Once installed, you can access it from the bottom menu.
 Now you have your own GUI for operation linux, but this GUI is mainly for install vivado. So moving on.
 
+If the remote desktop connection does not work, you can open the Linux version of firefox directly from the Linux server. 
+
+Simply enter:
+```
+firefox
+```
+If you are getting errors, it could be that firefox is not installed on your machine. Enter these commands again:
+```
+sudo apt update
+sudo apt install firefox
+```
+This should open firefox and you can download Vivado directly from there.
+
 Download vivado from [google drive] (https://drive.google.com/file/d/1WO01bS3iN9yfolHHp8Ei3jNzKc60Y-Zb/view)
 or from the [official website] (https://www.xilinx.com/support/download.html)
 
