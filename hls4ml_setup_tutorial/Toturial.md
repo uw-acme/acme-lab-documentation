@@ -1,5 +1,5 @@
 # HLS4ML Environment Set Up Tutorial
-## _The toturial will be seperated into 4 parts_
+## _The tutorial will be seperated into 4 parts_
 
 First of all, welcome to this team. 
 This tutorial will guide you on setting up the environment you need to run HLS4ML on your own computer.
@@ -7,13 +7,13 @@ This tutorial will guide you on setting up the environment you need to run HLS4M
  _✨Whish your setup journey goes  well and smooth ✨_
 
 ## System requirment
-We recommend using Linux as the OS, so if you are using Linux or have Linux virtual machine on your computer, you may continue from step 2. If you are using Windows as your OS, we highly recommend using a feature called Windows Subsystem for Linux, aka WSL to run Linux. You may also build a virtual machine by yourself, but this tutorial will only teach you how to use WSL. (We currently don’t know how to build environment on MacOS, if you are using MacOS, please contact Professor or Elham for help)
+We recommend using Linux as the OS, so if you are using Linux or have Linux virtual machine on your computer, you may continue from step 2. If you are using Windows as your OS, we highly recommend using a feature called Windows Subsystem for Linux, aka WSL to run Linux. You may also build a virtual machine by yourself, but this tutorial will only teach you how to use WSL. (We currently don’t know how to build the environment on MacOS, if you are using MacOS, please contact Professor or Elham for help)
 
-Also remember to make sure your personal device have at least 80 - 100 GB free storage for confidently install all the software and packages for hls4ml.
+Also remember to make sure your personal device have at least 80 - 100 GB free storage to confidently install all of the software and packages for hls4ml.
 
-## Step 1: Setup the WSL(Windows Subsystem for Linux) for Window machine
+## Step 1: Setup WSL(Windows Subsystem for Linux) for Windows machines
 
-####1.
+#### 1.
 In the taskbar, click the tool and type in “Turn Windows Feature On or Off”,
 ![](./image/part101.png)
 
@@ -21,26 +21,22 @@ you may also find it from  Control Panel -> Programs -> Turn Windows features on
 ![](./image/part102.png)
 ![](./image/part103.jpeg)
 
-Then select the Windows Subsystem for Linux and click OK.
+Then select Windows Subsystem for Linux and click OK.
 
 ![](./image/part104.jpeg)
 
-You may have some error code, generally it is due to old version of your current windows, update your windows should fix the problem. 
+You may have some error code, generally it is due to old version of your current windows, updating your windows should fix the problem. 
 ![](./image/part105.jpeg)
 
-####2. 
-Now you have enabled the feature, it is time to get a Linux for you. We recommend using Linux 18.04 LTS (Long term support version) as your Linux version. There are two ways to do so. You may download it from Microsoft Store, just search Linux 18.04 LTS. 
+#### 2. 
+Now that you enabled the feature, it is time to get a Linux distribution for you. We recommend using Ubuntu 18.04 LTS (Long term support version) as your Linux version. You may download it from Microsoft Store, just search Ubuntu 18.04 LTS. 
 
-If you don’t want to install it in your C disk, you may download it from this [link] (https://drive.google.com/file/d/1yBP0fodQXuzFd9DRWxg6J7Xh2v59tvY6/view?usp=sharing)
-
-For people who want download it to the place you want (which means you may install this on a flash drive or a portable hard drive), once you have the zip file, unzip it to a folder and you will see:
-
-Then click the ubuntu1804.exe or open it from Microsoft Store or Quick Start Menu if you downloaded it from there. A terminal will pop up and Linux will start its initial set up, it will take a few minutes. Then it will ask you to set a username and password as its administrator
+Then click the ubuntu1804.exe or open it from Microsoft Store or Quick Start Menu if you downloaded it from there. A terminal will pop up and Linux will start its initial set up; it will take a few minutes. Then it will ask you to set a username and password as its administrator
 ![](./image/new_1.png)
 
 Please set your username with a lowercase alphabet start and no space between each word. 
 
-Now, we need to make sure that the WSL you just installed is version 2, this is a preparation work for later Vivado installation. Open the Windows Powershell, type in 
+Now, we need to make sure that the WSL you just installed is version 2, this is preparation work for the Vivado installation later. Open Windows Powershell, type in 
 ```
 wsl -l -v
 ```
@@ -49,7 +45,7 @@ wsl -l -v
 
 If it is not version 2, here is what you need to do.
 
-a. [Visit here] (https://aka.ms/wsl2), under install tag, go to Manual install steps for older version, you can find a download link called WSL2 Linux kernel update package for x64 machines, download it and install.
+a. [Visit here](https://aka.ms/wsl2), under install tag, go to Manual install steps for older version, you can find a download link called WSL2 Linux kernel update package for x64 machines, download it and install.
 
 b. In windows powershell, type in 
 ```
@@ -69,25 +65,21 @@ Now back to the Linux terminal and type in:
 sudo apt update 
 sudo apt upgrade
 ```
-This is for upgrading your Linux. (sudo means super user do, Linux will ask your password to processed the process, and when you type in your password, it will not appear on the terminal, don’t worry, it is designed to do so, just type in your password and press ENTER) After this step, your Linux OS is all set.
+This is for upgrading your Linux. sudo means super user do, Linux will ask your password to process the command. When you type in your password, it will not appear on the terminal. Don’t worry, it is designed to do so; just type in your password and press ENTER After this step, your Linux OS is all set.
 
-## Step 2: Steup Miniconda and hls4ml into your Linux system
+## Step 2: Setup Miniconda and hls4ml into your Linux system
 
-As an engineer, you may be doing multiple projects at the same time, each project will use different environment and packages as its requirement. How to keep one’s environment and packages just to its own? It is time to introduce “Conda”, a powerful package manager and virtual environment builder.
+As an engineer, you may be doing multiple projects at the same time, each project will use different environment and packages as its requirement. How do we keep one’s environment and packages just to its own? It is time to introduce “Conda”, a powerful package manager and virtual environment builder.
 
-In your windows browser, access [Conda.io] (https://docs.conda.io/en/latest/miniconda.html#installing)
+Copy the following link: https://repo.anaconda.com/miniconda/Miniconda3-py39_4.11.0-Linux-x86_64.sh. This link comes from Anaconda's [archive](https://repo.anaconda.com/miniconda/) of Conda installers.
 
-Under Linux installers, 
-right click Python3.9 version and copy the link address
-
-![](./image/part201.jpeg)
-Then in your Linux terminal, type wget, then paste the link to terminal (In terminal, right click is paste), so the entire command should looks like:
+In your Linux terminal, type wget, then paste the link to terminal (In terminal, right click is paste), so the entire command should looks like:
 
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.11.0-Linux-x86_64.sh
 ```
 
-This command will help you download Miniconda3 installation program to your Linux. Once it is finished downloading, type the following code:
+This command will help you download a Miniconda3 installation program to your Linux. Once it is finished downloading, type the following command:
 
 ```
 bash Miniconda3-py39_4.11.0-Linux-x86_64.sh
@@ -99,7 +91,7 @@ bash Mini
 ```
 then press Tab, it will auto fill the rest of the command. Then follow the guidance and finish installation. Once you finished installation, terminal will ask to whether to initialize conda or not, type yes and press ENTER.
 
-Now we need to edit one file to make sure your Linux recognizes the conda you just installed. You will use VIM, a powerful text editor, to edit bash_profile.
+Now we need to edit one file to make sure your Linux recognizes the Conda you just installed. You will use VIM, a powerful text editor, to edit bash_profile.
 
 Here are some commands you need to know for later operation:
 
@@ -123,7 +115,7 @@ vim ~/.bash_profile
 - Press ENTER.
  
 - Press i to change the vim into insert mode.
-- Copy and paste the following things into the terminal. Change the '<YOUR USERNAME >` part into your username that you set in the step 1.
+- Copy and paste the following things into the terminal. Change the '<YOUR USERNAME >` part into your username that you set in step 1.
 
 ```
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
@@ -138,14 +130,14 @@ alias jupyter-notebook="/home/<YOUR USERNAME>/miniconda3/envs/hls4ml-tutorial/bi
 :wq
 ```
 
-- Once you exit vim, run the following code in your terminal:
+- Once you exit vim, run the following commands in your terminal:
 
 ```
  source ~/.bash_profile
  source ~/.bashrc
 ```
 
-After making the configuration, run `conda config --set auto_activate_base false` to make sure that conda won’t activate base environment every time you turn on the terminal.
+After making the configuration, run `conda config --set auto_activate_base false` to make sure that conda won’t activate the base environment every time you turn on the terminal.
 
 
 Now it is time to download hls4ml into your Linux,
@@ -172,7 +164,7 @@ cd
 cd hls4ml-tutorial
 ```
 
-- To let conda create the virtual environment for this project, run 
+- To let Conda create the virtual environment for this project, run 
 ```
 conda env create -f environment.yml
 ```
@@ -192,11 +184,11 @@ to exit the environment, and use
 ```
 conda env list
 ```
-to check how many environments you have on this Linux. Remember to activate your environment every time you want to do this project on your local machine. 
+to check how many environments you have on this Linux. Remember to activate your environment every time you want to work on this project on your local machine. 
 
 ## Step 3: Download Jupyter Notebook (Not necessary but highly recommanded)
 
-We now want to use Jupyter-notebook (A web-based interactive computing platform) to run all the stuffs we need. Normally, we need to have a browser to do so, but WSL doesn’t have graphic interface, so we will use windows’ browser to assist us. Remember the last line that we put in your bash_profile? 
+We now want to use Jupyter-notebook (A web-based interactive computing platform) to run all the stuffs we need. Normally, we need to have a browser to do so, but WSL doesn’t have a graphic interface, so we will use windows’ browser to assist us. Remember the last line in your bash_profile? 
 ![](./image/part203.jpeg)
 
 This line creates an alias that whenever you run jupyter-notebook, it will run it without showing browser, instead it will give us a token that can be access though any browser which is sharing the same local area network. Here is an example:
@@ -205,12 +197,12 @@ Copy one of these URL into the browser, and you may access your directory in you
 
 If everything goes smoothly, you should look something like this:
 ![](./image/notebook_1.png)
-This is my linux home directory, yours definitely going to looks different. In your directory, find the folder _hls4ml-tutorial_, and inside, you should be able to see these:
+This is my linux home directory, yours definitely going to look different. In your directory, find the folder _hls4ml-tutorial_, and inside, you should be able to see these:
 ![](./image/notebook_2.png)
-Click _part1\_getting\_started.ipynb_ and run the Part 1 code, you may have some error saying not able to access dynamic library, it just means it cannot detect your GPU and it will continue process with your CPU.
+Click _part1\_getting\_started.ipynb_ and run the Part 1 code, you may have some error saying not able to access a dynamic library, it just means it cannot detect your GPU and it will continue using your CPU.
 ![](./image/notebook_3.png)
 
-You probably are going to encounter some errors when running these codes, one common error is that it cannot find Keras or cannot Import TensorFlow properly, in that case, you need to reinstall TensorFlow. Close Jupyter notebook and go back to linux terminal. In the terminal, press
+You probably are going to encounter some errors when running these codes. One common error is that it cannot find Keras or cannot Import TensorFlow properly. In that case, you need to reinstall TensorFlow. Close Jupyter notebook and go back to linux terminal. In the terminal, press
 ```
 ctrl 
 ```
@@ -239,6 +231,14 @@ pip install tensorflow
 
 If you encounter other problems, please contact me at lostecho@uw.edu or on Slack. Let’s solve it together.
 
+If there are still errors, [this folder](https://drive.google.com/drive/u/1/folders/1lOkO4LGAeWUdoXZ86JEmOaaEexPc7u4o) has a Conda environment yml file and set of tutorial notebooks that are known to work. Replace the jupyter notebooks in `/hls4ml-tutorial`.
+
+To recreate the environment, delete the existing one with the following commands:
+```
+conda deactivate
+conda env remove --name hls4ml-tutorial
+```
+Replace the environment.yml file in `/hls4ml-tutorial` with the file from the folder and repeat the steps to create a Conda environment.
 
 ## Step 4: Download Vivado
 
@@ -256,9 +256,9 @@ What we did above is to install a server deployer and a graphic user interface t
 
 ```
 sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak
- sudo sed -i ‘s/3389/3390/g’ /etc/xrdp/xrdp.ini
- sudo sed -i ‘s/max_bpp=32/#max_bpp=32\nmax_bpp=128/g’ /etc/xrdp/xrdp.ini
- sudo sed -i ‘s/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g’ /etc/xrdp/xrdp.ini echo xfce4-session > ~/.xsession
+sudo sed -i ‘s/3389/3390/g’ /etc/xrdp/xrdp.ini
+sudo sed -i ‘s/max_bpp=32/#max_bpp=32\nmax_bpp=128/g’ /etc/xrdp/xrdp.ini
+sudo sed -i ‘s/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g’ /etc/xrdp/xrdp.iniecho xfce4-session > ~/.xsession
 ```
 
 What we did here is doing some adjustment on the user interface and make sure that this server can enable our user interface properly. So we first make a backup of the _xrdp.ini_ file in case we messed up. Then we change the connection port from 3389 to 3390, you can change whatever port you want, but recommend at least over 3300 and lower than 31000. Then we change the resolution for the interface to make it not blur, at the end we add _xfce4-session_ in to the _.xsession_ file to make it recognize the interface.
@@ -280,14 +280,14 @@ To:
 
 ```
 # test -x /etc/X11/Xsession && exec /etc/X11/Xsession
- # exec /bin/sh /etc/X11/Xsession
+# exec /bin/sh /etc/X11/Xsession
 ```
 
 Then we need to add this two line at the end of this file:
 
 ```
 # xfce
- startxfce4
+startxfce4
 ```
 
 Now you have finished modify the configuration for your local Linux server.
@@ -317,10 +317,23 @@ When you get inside the server, right click can callout a menu which you can get
 Once installed, you can access it from the bottom menu.
 Now you have your own GUI for operation linux, but this GUI is mainly for install vivado. So moving on.
 
-Download vivado from [google drive] (https://drive.google.com/file/d/1WO01bS3iN9yfolHHp8Ei3jNzKc60Y-Zb/view)
-or from the [official website] (https://www.xilinx.com/support/download.html)
+If the remote desktop connection does not work, you can open the Linux version of Firefox directly from the Linux server. 
 
-we recommend to download from our drive because the tutorial uses the same version as we provided. But if you decided to download from the website, it has to be 2019.1 or 2019.2 version.
+Simply enter:
+```
+firefox
+```
+If you are getting errors, it could be that firefox is not installed on your machine. Enter these commands again:
+```
+sudo apt update
+sudo apt install firefox
+```
+This should open firefox and you can download Vivado directly from there.
+
+Download vivado from the [official website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html).
+
+We recommend downloading version 2019.1 or 2019.2. Download the All OS Installer Single-File Download
+![](./image/VivadoDownloadArchive.png)
 
 Once downloaded, you can access the file from Download folder. To run the file, you need to do the following since it is a bin file.
 
@@ -345,7 +358,7 @@ Follow the procedure and you will see a Select Edition to install panel, choose 
 
 Vivado takes at least 68 GB to install.
 
-When you finally finished installing, you will need to do similar process that you did in conda step to make sure Linux recognize the Vivado you installed.
+When you finally finished installing, you will need to do similar process that you did in the Conda step to make sure Linux recognizes the Vivado you installed.
 
 a) Type 
 ```
@@ -355,9 +368,13 @@ and press ENTER.
 
 b) Press `i` to change the vim into insert mode.
 
-c) Copy and paste the following things into the end of the file. Change the `<YOUR USERNAME>` part into your username that you set in the step 1.
+c) Copy and paste the following commands into the end of the file. Change the `<YOUR USERNAME>` part into your username that you set in the step 1.
 ```
 export PATH="/tools/Xilinx/Vivado/2019.1/bin:$PATH"
+
+source /tools/Xilinx/Vivado/2019.1/settings64.sh
+
+export CPATH="/usr/include/x86_64-linux-gnu"
 ```
 
 d) Press ESC and type 
@@ -373,7 +390,7 @@ and press ENTER.
 
 f) Press `i` to change the vim into insert mode.
 
-g) Copy and paste the following things into the end of the file. Change the `<YOUR USERNAME>` part into your username that you set in the step 1.
+g) Copy and paste the following commands into the end of the file. Change the `<YOUR USERNAME>` part into your username that you set in the step 1.
 
 ```
 export PATH="/home/<YOUR USERNAME>/miniconda3/bin:$PATH"
@@ -398,7 +415,7 @@ source ~/.bashrc
 ```
 in your terminal
 
-Now you are all set to run the hls4ml-tutorial on your local machine. Please follow the hls4ml training and explaining part carefully, you will learn how to train a model and then convert it into FPGA bit stream. Here are some resources that could help you better understand the hls4ml.
+Now you are all set to run the hls4ml-tutorial on your local machine. Please follow the hls4ml training and explaining part carefully, you will learn how to train a model and then convert it into FPGA bit stream. Here are some resources that could help you better understand hls4ml.
 
 [Linux Tutorial for Beginners: Introduction to Linux Operating System] (https://www.youtube.com/watch?v=V1y-mbWM3B8)
 
@@ -406,5 +423,24 @@ Now you are all set to run the hls4ml-tutorial on your local machine. Please fol
 
 [HLS4ML Guide] (https://fastmachinelearning.org/hls4ml/)
 
+## Additional Notes and Insights
+### Bypassing Remote Desktop Connection
+* Most of the time, running `jupyter notebook` (as long as Firefox is installed) or running `vivado` from the command line will pull up the window without needing to use Remote Desktop Connection.
+* If a window doesn't appear after starting an application, then it's best to use Remote Desktop Connection.
 
+### `g++` errors
+* `hls_model.compile()` might throw a `g++` error. Try entering `sudo apt install g++` and `sudo apt install gcc` into the command line to resolve the issue.
+![](/image/g++Error.png)
 
+### Changing or adding Jupyter Notebook Kernels
+* If there are other library-related errors, verify the affected library appears when running `conda list` in the command line. One fix is changing the kernel in Jupyter notebook. Navigate to `Kernel` at the top of the notebook and select `Change Kernel`. Select `hls4ml-tutorial`.
+
+* To add a kernel to jupyter notebook, make sure to activate the `hls4ml-tutorial` Conda environment
+
+* Run the following commands:
+```
+conda install ipykernel
+
+python -m ipykernel install user --name="hlsm4l-tutorial" --display_name="hls4ml-tutorial"
+```
+* Verify the kernel appears with the command: `jupyter kernelspec list`
