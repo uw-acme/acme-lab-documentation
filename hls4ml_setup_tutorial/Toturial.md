@@ -441,6 +441,6 @@ Now you are all set to run the hls4ml-tutorial on your local machine. Please fol
 ```
 conda install ipykernel
 
-python -m ipykernel install user --name="hlsm4l-tutorial" --display_name="hls4ml-tutorial"
+python -m ipykernel install --user --name="hlsm4l-tutorial" --display_name="hls4ml-tutorial"
 ```
 * Verify the kernel appears with the command: `jupyter kernelspec list`
