@@ -1,0 +1,120 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: egl                            # Change
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: egl                         # Change
+  template:
+    metadata:
+      labels:
+        app: egl                       # Change
+    spec:
+      hostname: egl                    # Change
+      # tolerations:                   # Look at Nautilus' documentation before uncommenting 
+      # - effect: NoSchedule
+      #   key: nautilus.io/hardware
+      #   operator: Exists
+#      hostNetwork: true
+      containers:
+      - name: egl                      # Change
+        image: gitlab-registry.nrp-nautilus.io/nrp/u55c-desktop:latest
+        env:
+        - name: XILINXD_LICENSE_FILE    
+          value: "2100@xilinxd.xilinx-dev"   # Connects to Nautilus' Xilinx license server
+        - name: TZ
+          value: "UTC"
+        # Keep to default unless you know what you are doing with VirtualGL, `VGL_DISPLAY` should be set to either `egl[n]`, or `/dev/dri/card[n]` only when the device was passed to the container
+#        - name: VGL_DISPLAY
+#          value: "egl"
+        - name: SIZEW
+          value: "1920"
+        - name: SIZEH
+          value: "1200"
+        - name: REFRESH
+          value: "60"
+        - name: DPI
+          value: "96"
+        - name: CDEPTH
+          value: "24"
+        # Choose either `value:` or `secretKeyRef:` but not both at the same time
+        - name: PASSWD
+#          value: "mypasswd"
+          valueFrom:
+            secretKeyRef:
+              name: my-pass
+              key: my-pass
+        # Uncomment this to enable noVNC, disabing selkies-gstreamer and ignoring all its parameters except `BASIC_AUTH_PASSWORD`, which will be used for authentication with noVNC, `BASIC_AUTH_PASSWORD` defaults to `PASSWD` if not provided
+        - name: NOVNC_ENABLE
+          value: "true"
+        - name: WEBRTC_ENCODER
+#          value: "nvh264enc"
+          value: "x264enc"
+        - name: WEBRTC_ENABLE_RESIZE
+          value: "false"
+        - name: ENABLE_AUDIO
+          value: "true"
+        - name: ENABLE_BASIC_AUTH
+          value: "true"
+        ###
+        # Uncomment below to use a TURN server for improved network compatibility
+        ###
+        - name: TURN_HOST
+          value: "turn.nrp-nautilus.io"
+        - name: TURN_PORT
+          value: "3478"
+        # Provide only `TURN_SHARED_SECRET` for time-limited shared secret authentication or both `TURN_USERNAME` and `TURN_PASSWORD` for legacy long-term authentication, but do not provide both authentication methods at the same time
+        - name: TURN_SHARED_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: my-pass
+              key: turn-secret
+        # Change to `tcp` if the UDP protocol is throttled or blocked in your client network, or when the TURN server does not support UDP
+        - name: TURN_PROTOCOL
+          value: "udp"
+        # You need a valid hostname and a certificate from authorities such as ZeroSSL (Let's Encrypt may have issues) to enable this
+        - name: TURN_TLS
+          value: "false"
+        stdin: true
+        tty: true
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        resources:
+          limits:
+            memory: 30Gi # Your namespace is alloted a limited amount of resources used at a time. Set these as low as you are able
+            cpu: "10"
+            amd.com/xilinx_u55c_gen3x16_xdma_base_3-0: 1
+#            nvidia.com/gpu: 1
+          requests:
+            memory: 30Gi
+            cpu: "10"
+            amd.com/xilinx_u55c_gen3x16_xdma_base_3-0: 1
+        volumeMounts:
+        - mountPath: /dev/shm
+          name: dshm
+        - mountPath: /cache
+          name: egl-cache-vol
+        - mountPath: /home/user
+          name: root-vol
+#        - mountPath: /home/user/shared
+#          name: shared-vol
+      dnsConfig:
+        nameservers:
+        - 8.8.8.8
+        - 8.8.4.4
+      volumes:
+      - name: dshm
+        emptyDir:
+          medium: Memory
+      - name: egl-cache-vol
+        emptyDir: {}
+      - name: shared-vol
+#        persistentVolumeClaim:
+#          claimName: sharedvol
+      - name: root-vol
+        persistentVolumeClaim:
+          claimName: homevol

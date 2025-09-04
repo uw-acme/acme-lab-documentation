@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: haproxy
+  name: egl                                # Change to value you changed to in deployment.yaml
+spec:
+  rules:
+  - host: <YOUR_NAME>-desktop.nrp-nautilus.io
+    http:
+      paths:
+      - backend:
+          service:
+            name: egl                     # Change to value you changed to in deployment.yaml
+            port:
+              name: http
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - <YOUR_NAME>-desktop.nrp-nautilus.io
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: egl                             # Change to value you changed to in deployment.yaml
+  labels:
+    app: egl                           # Change to value you changed to in deployment.yaml
+spec:
+  selector:
+    app: egl                          # Change to value you changed to in deployment.yaml
+  ports:
+  - name: http
+    protocol: TCP
+    port: 8080
