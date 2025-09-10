@@ -1,0 +1,95 @@
+# This yaml file creates a virtual machine. For some things that don't run on
+# the container deployments (vivado 2025.1 for example) a virtual machine can 
+# run as it simulates a full OS image. Tutorial coming soon
+
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: <UNIQUE_NAME_1>                 # Change
+spec:
+  dataVolumeTemplates:
+  - metadata:
+      name: <UNIQUE_NAME_2>             # Change
+    spec:
+      source:
+        registry:
+          url: "docker://quay.io/containerdisks/ubuntu:22.04"
+      pvc:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 150Gi
+        storageClassName: rook-ceph-block
+  runStrategy: Always
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      accessCredentials:
+      - sshPublicKey:
+          source:
+            secret:
+              secretName: my-pub-key  # Change to secret created in the tutorial if using a different name.
+          propagationMethod:
+            qemuGuestAgent:
+              users:
+              - ubuntu           #Default user
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: topology.kubernetes.io/region
+                operator: In
+                values:
+                - us-west
+      architecture: amd64
+      networks:
+      - name: default
+        pod: {}
+      domain:
+        cpu:
+          cores: 5
+        devices:
+          interfaces:
+          - name: default
+            masquerade: {}
+            macAddress: "02:00:00:00:00:02"
+          inputs:
+          - bus: usb
+            name: tablet1
+            type: tablet
+          autoattachGraphicsDevice: true
+          autoattachSerialConsole: true
+          disks:
+          - bootOrder: 1
+            disk:
+              bus: virtio
+            name: datavolumedisk1
+        machine:
+          type: q35
+        resources:
+          limits:
+            ephemeral-storage: 50Gi
+            memory: 16Gi
+            cpu: 5
+          requests:
+            ephemeral-storage: 50Gi
+            memory: 16Gi
+            cpu: 5
+      volumes:
+      - dataVolume:
+          name: <UNIQUE_NAME_2>
+        name: datavolumedisk1
+      - cloudInitConfigDrive:
+          userData: |-  # Change password if you'd like
+            #cloud-config
+            password: fedora        
+            chpasswd: { expire: False }
+            network:
+              version: 2
+              ethernets:
+                enp1s0:
+                  dhcp4: true
+        name: cloudinit
