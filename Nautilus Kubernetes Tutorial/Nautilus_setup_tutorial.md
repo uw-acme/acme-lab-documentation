@@ -42,6 +42,6 @@ If .kube doesn't exist, make it with mkdir ~/.kube
     ```
 
 ## Next Steps
-Now you should be all set up! For accessing servers already set up for you, this is all you need. For tutorials in setting up resources, look into the [Deployments](Deployments.md) and the Virtual Machine tutorials.
+Now you should be all set up! For accessing servers already set up for you, this is all you need. For tutorials in setting up resources, look into the [Deployments](Deployments.md) and the [Virtual Machines](Virtual_machines.md) tutorials.
 
 For any additional questions, I recommend looking at the [Nautilus](https://nrp.ai/documentation/) documentation, or the [Kubernetes](https://kubernetes.io/docs/home/) documentation. I recommend looking at Nautilus documentation first as you are directly using their resources, so anything they say goes. Kubernetes is a tool used by many in the industry so their documentation is more general. If you need a feature enabled, message a Nautilus admin on [Element](https://element.nrp-nautilus.io/#/room/#general:matrix.nrp-nautilus.io)

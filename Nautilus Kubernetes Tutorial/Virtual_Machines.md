@@ -7,11 +7,13 @@ Virtual machines are a complete image of an OS. However they tend to run slower 
 ## Downloading Tools
 
 If you haven't gotten the kubectl tools setup yet, do so by working through the Nautilus Tutorial. The first step for virtual machines is installing Kubevirt, the manager for virtual machines. Some tutorials setup kubevirt with kubectl, however I install it as a standalone since Nautilus uses a slightly older version
-run:
-Invoke-WebRequest -Uri https://github.com/kubevirt/kubevirt/releases/download/v1.5.0/virtctl-v1.5.0-windows-amd64.exe -OutFile virtctl.exe
-(Works on windows. If you go to the link you can download it directly if needed)
+run: `Invoke-WebRequest -Uri https://github.com/kubevirt/kubevirt/releases/download/v1.5.0/virtctl-v1.5.0-windows-amd64.exe -OutFile virtctl.exe`
 
-Place the executable in a folder that is on your computer's path so you can execute it. If you don't know your computer's path, run `$env:Path` on windows to find folders to place it into, or search *adding folders to Windows path* on the internet to add a new folder. I like the second option 
+(Works on windows. If you go to [this link](https://github.com/kubevirt/kubevirt/releases/tag/v1.5.0) you can download it directly from the bottom of the page if needed)
+
+Place the executable in a folder that is on your computer's path so you can execute it. If you don't know your computer's path, run `$env:Path` on windows to find folders to place it into, or search *adding folders to Windows path* on the internet to add a new folder.
+
+For Mac, running 'echo $PATH' will show you your search path
 
 To verify that virtctl is working, run `virtctl --help` 
 
@@ -20,10 +22,12 @@ To verify that virtctl is working, run `virtctl --help`
 Now that you have virtctl installed, we will setup a Virtual Machine. An example Virtual Machine yaml is shown in virtualmachine.yaml. This is set up to create a volume with an ubuntu image, for more information about volumes, read the `Server Storage` Section of the Deployments tutorial. 
 Download the virtualmachine.yaml file and change what is neccesary, make sure to change the marked fields. The storageclass is configured so you can increase storage space later, so don't worry about running out of space.
 
+### Secret
 Accessing the virtual machines requires creating a secret from your ssh key folder. If you do not have ssh keys currently, use the windows command `ssh-keygen` to create them. To create the secret, use `kubectl create secret generic my-pub-key --from-file=key1=SSHKEYFILE.pub` Make sure the keyfile used is your public one (ending in .pub). If you need to add more keys later, use `kubectl edit secret my-pub-key` and add a new key field with the new ssh key. The way the Virtual Machine is configured, the server should automatically see the new ssh keys in the secret. 
 
 **Note:** If you add more users to the Virtual Machine with `sudo adduser newuser` make sure to add the user to the qemuGuestAgent.users section of the yaml and then `kubectl apply -f` the file to update the VM
 
+### Launching
 Once you have the yaml configured, use `kubectl apply -f virtualmachine.yaml` to create the Virtual Machine. 
 
 Here are a couple useful commands you'll need

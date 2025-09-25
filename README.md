@@ -1,5 +1,5 @@
 # acme-resources
-
+```
 1. common                   <!-- files shared or relevant to all groups -->
     |-- devices             <!-- fpgas, ICs and other hardware specs and datasheets -->
         |-- fpga_7series 
@@ -8,7 +8,15 @@
     |-- tutorials           <!-- software, hardware and tools intro and comprehensive tutorials -->
         |-- modelsim
         |-- vivado
-2. hls4ml                   
+2. hls4ml                   <!-- setup and usage tutorials for hls4ml -->
+    |-- hls4ml_layer_implementation_tutorial   
+    |-- hls4ml_setup_tutorial       
+    |-- hls4ml-resources
+    |-- ml-resources  
+3. Nautilus Kubernetes Tutorial <!-- setup and usage tutorials for using Nautilus cloud computing -->
+    |-- Nautilus_setup_tutorial
+    |-- Virtual_Machines
+    |-- Deployments
 3. lhc                      
     |-- resourse-list.md    <!-- comprehensive set of resources and their links for the lhc group -->
     |-- aurora              <!-- aurora 64b66b protocal and guides -->
@@ -17,7 +25,7 @@
 4. verilog-nn
     |-- resourse-list.md    <!-- comprehensive set of resources and their links for the verilog-nn group -->
     |-- whitepapaers        <!-- whitepapers/pulications on Xilinix and FPGA ML applications -->
-
+```
 ### Description
 Collection of documents, links and other resources for UW's ACME Lab. Some of these resources are currently tracked as external links and may require CERN or UW authentication and internet connection to access.
 
