@@ -40,14 +40,17 @@ virtctl vnc <VM name>     # Opens a vnc connection to the VM
 For most of the setup, use `virtctl console` to give commands to the vm as it is much faster than `virtctl vnc`. If you just want to run the server in headless mode (No GUI), this is all you need. However, I recommend downloading xfce for a graphical interface so you can download vivado and other such tools. Use `sudo apt install xfce4` to do so and use `startxfce4` in the vnc connection to start the graphics interface. 
 
 ## Setting up Connection to VS Code
-First thing we need to do is verify the SSH connection. Try running `virtctl ssh <VM name>` to see if you can connect. If you are able to, great! If not, enter the console with `virtctl console <VM name>` and run the following commands
+First thing we need to do is verify the SSH connection. Try running `virtctl ssh <VM name>` to see if you can connect. If you are able to, great! If not (and you are setting up the server), enter the console with `virtctl console <VM name>` and run the following commands
 ```
 sudo dhclient enp1s0
 systemctl status ssh
 ```
 If the first command passes with no output and the second command shows all green status, then you should be ok. The first command was to set up the ethernet connection and the second one was to verify the ssh connection in the VM
 
-Once you can connect to SSH, now it is time to connect it to VS code. Download the VS code Remote Explorer extention by Microsoft. Once installed, you should see a computer icon with 2 arrows facing eachother on your left toolbar. Click this
+Once you can connect to SSH, now it is time to connect it to VS code. Download the 3 VS code Remote Explorer extentions by Microsoft (below).
+![alt text](image-5.png)
+
+ Once installed, you should see a computer icon with 2 arrows facing eachother on your left toolbar. Click this
 
 ![Remote Explorer Icon](image-2.png)
 

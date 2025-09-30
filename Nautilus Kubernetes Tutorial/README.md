@@ -1,7 +1,7 @@
 # Getting Started
 Start with the Nautilus Setup Tutorial. Then, depending on what you are looking for, go into the Deployment or the Virtual Machine tutorial. Each tutorial starts with a description of the resource it teaches
 
-|-- **If you are here for HLS4ML_VS_MANUAL**, follow these steps:
+## **If you are here for the HLS4ML VS MANUAL project**, follow these steps:
 1. Finish the Nautilus Setup Tutorial
 2. Get through the Downloading Tools section in [Virtual Machines](Virtual_machines.md). 
 3. There is already a VM running so skip to Setting up Connection to VS Code. 
