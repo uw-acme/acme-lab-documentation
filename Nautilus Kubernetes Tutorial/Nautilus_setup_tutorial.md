@@ -12,16 +12,16 @@ If a full operating system is neccesary, ask the Nautilus admins about Virtual M
 
 If you encounter any issues, contact me at ceravcal@uw.edu or the NRP admins at [Element](https://element.nrp-nautilus.io/#/room/#general:matrix.nrp-nautilus.io).
 
-Before getting started read [these](https://nationalresearchplatform.org/documentation/userdocs/start/policies/) policies.
+Before getting started read [these](https://nrp.ai/documentation/userdocs/start/policies/) policies.
 
 
 ## **Downloading Server Controller**
 
-This section covers setting up Kubectl on your computer. Kubectl is the way to setup and control server elements from your personal computer. A full tutorial is [here](https://nationalresearchplatform.org/documentation/userdocs/start/getting-started/#cluster-access-via-kubectl), however I will give a brief overview.
+This section covers setting up Kubectl on your computer. Kubectl is the way to setup and control server elements from your personal computer. A full tutorial is [here](https://nrp.ai/documentation/userdocs/start/getting-started/), however I will give a brief overview.
 
 1. Download kubectl from the [Kubernetes release page](https://kubernetes.io/releases/download/#binaries)
 
-2. Download this [config file](https://nationalresearchplatform.org/config),
+2. Download this [config file](https://nrp.ai/config),
 and put it into your $HOME/.kube folder. 
 If .kube doesn't exist, make it with mkdir ~/.kube
 
