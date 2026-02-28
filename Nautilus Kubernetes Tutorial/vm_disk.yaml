@@ -1,0 +1,15 @@
+apiVersion: cdi.kubevirt.io/v1beta1
+kind: DataVolume
+metadata:
+  name: hvm1-linstor-main
+spec:
+  source:
+    registry:
+      url: "docker://quay.io/containerdisks/ubuntu:22.04"
+  pvc:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 512Gi
+    storageClassName: linstor-igrok

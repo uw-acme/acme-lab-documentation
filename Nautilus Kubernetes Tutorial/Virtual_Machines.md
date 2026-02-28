@@ -19,7 +19,7 @@ To verify that virtctl is working, run `virtctl --help`
 
 
 ## Starting a VM
-Now that you have virtctl installed, we will setup a Virtual Machine. An example Virtual Machine yaml is shown in virtualmachine.yaml. This is set up to create a volume with an ubuntu image, for more information about volumes, read the `Server Storage` Section of the Deployments tutorial. 
+Now that you have virtctl installed, we will setup a Virtual Machine. An example Virtual Machine yaml is shown in virtualmachine.yaml. You'll also have to create storage for the machine. Edit vm_disk.yaml and run `kubectl apply -f vm_disk.yaml`, for more information about volumes, read the `Server Storage` Section of the Deployments tutorial. 
 Download the virtualmachine.yaml file and change what is neccesary, make sure to change the marked fields. The storageclass is configured so you can increase storage space later, so don't worry about running out of space.
 
 ### Secret

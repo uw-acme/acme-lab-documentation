@@ -1,40 +1,27 @@
-# This yaml file creates a virtual machine. For some things that don't run on
-# the container deployments (vivado 2025.1 for example) a virtual machine can 
-# run as it simulates a full OS image. Tutorial coming soon
-
 apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
-  name: <UNIQUE_NAME_1>                 # Change
+  name: NAME
 spec:
-  dataVolumeTemplates:
-  - metadata:
-      name: <UNIQUE_NAME_2>             # Change
-    spec:
-      source:
-        registry:
-          url: "docker://quay.io/containerdisks/ubuntu:22.04"
-      pvc:
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 150Gi
-        storageClassName: rook-ceph-block
   runStrategy: Always
   template:
     metadata:
       creationTimestamp: null
+      labels:
+        app: NAME
     spec:
       accessCredentials:
       - sshPublicKey:
           source:
             secret:
-              secretName: my-pub-key  # Change to secret created in the tutorial if using a different name.
+              secretName: pub-key # Name of secret generated
           propagationMethod:
             qemuGuestAgent:
-              users:
-              - ubuntu           #Default user
+              users:      # Add a field for each user you use ssh to connect to
+              - admin
+              - user1
+              - user2
+              - user3
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -50,7 +37,7 @@ spec:
         pod: {}
       domain:
         cpu:
-          cores: 5
+          cores: 21
         devices:
           interfaces:
           - name: default
@@ -66,27 +53,45 @@ spec:
           - bootOrder: 1
             disk:
               bus: virtio
-            name: datavolumedisk1
+            name: datavolumedisk1 
+          - disk:   
+              bus: virtio                  
+            name: toolvol
+          # - disk:
+          #     bus: virtio                  # Add a field for each disk you want to mount
+          #   name: backupvol
         machine:
           type: q35
         resources:
           limits:
             ephemeral-storage: 50Gi
-            memory: 16Gi
-            cpu: 5
+            memory: 64Gi
+            cpu: 21
           requests:
             ephemeral-storage: 50Gi
-            memory: 16Gi
-            cpu: 5
+            memory: 64Gi
+            cpu: 21
       volumes:
-      - dataVolume:
-          name: <UNIQUE_NAME_2>
-        name: datavolumedisk1
+      - name: datavolumedisk1
+        persistentVolumeClaim:
+          claimName: main-disk             # Change this to the one created with vm_disk.yaml 
+      - name: toolvol                      # Leave this uncommented if you want access to a disk with preloaded vivado 2019.1 and 2025.1 and you're in the acme-lab namespace
+        persistentVolumeClaim:
+          claimName: xilinxvol
+      # - name: backupvol                 # Add a field for each disk you want to mount
+      #   persistentVolumeClaim:
+      #     claimName: your-backup
       - cloudInitConfigDrive:
-          userData: |-  # Change password if you'd like
+          userData: |-
             #cloud-config
-            password: fedora        
+            password: fedora
             chpasswd: { expire: False }
+            users:
+            - name: admin
+              groups: sudo
+              shell: /bin/bash
+              sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+              lock_passwd: false
             network:
               version: 2
               ethernets:
